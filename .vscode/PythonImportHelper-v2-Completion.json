@@ -1,0 +1,71 @@
+[
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFilter",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageEnhance",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "resize_image",
+        "kind": 2,
+        "importPath": "src.image.image_processing",
+        "description": "src.image.image_processing",
+        "peekOfCode": "def resize_image(input_path, output_path, width, height):\n    \"\"\"Resize an image.\"\"\"\n    image = Image.open(input_path)\n    resized = image.resize((width, height))\n    resized.save(output_path)\n    print(f\"Image resized and saved to: {output_path}\")\ndef grayscale_image(input_path, output_path):\n    \"\"\"Convert an image to grayscale.\"\"\"\n    image = Image.open(input_path)\n    grayscale = image.convert(\"L\")",
+        "detail": "src.image.image_processing",
+        "documentation": {}
+    },
+    {
+        "label": "grayscale_image",
+        "kind": 2,
+        "importPath": "src.image.image_processing",
+        "description": "src.image.image_processing",
+        "peekOfCode": "def grayscale_image(input_path, output_path):\n    \"\"\"Convert an image to grayscale.\"\"\"\n    image = Image.open(input_path)\n    grayscale = image.convert(\"L\")\n    grayscale.save(output_path)\n    print(f\"Grayscale image saved to: {output_path}\")\ndef blur_image(input_path, output_path, radius=5):\n    \"\"\"Apply blur effect to an image.\"\"\"\n    image = Image.open(input_path)\n    blurred = image.filter(ImageFilter.GaussianBlur(radius))",
+        "detail": "src.image.image_processing",
+        "documentation": {}
+    },
+    {
+        "label": "blur_image",
+        "kind": 2,
+        "importPath": "src.image.image_processing",
+        "description": "src.image.image_processing",
+        "peekOfCode": "def blur_image(input_path, output_path, radius=5):\n    \"\"\"Apply blur effect to an image.\"\"\"\n    image = Image.open(input_path)\n    blurred = image.filter(ImageFilter.GaussianBlur(radius))\n    blurred.save(output_path)\n    print(f\"Blurred image saved to: {output_path}\")\ndef adjust_brightness(input_path, output_path, factor=1.5):\n    \"\"\"Adjust image brightness.\"\"\"\n    image = Image.open(input_path)\n    enhancer = ImageEnhance.Brightness(image)",
+        "detail": "src.image.image_processing",
+        "documentation": {}
+    },
+    {
+        "label": "adjust_brightness",
+        "kind": 2,
+        "importPath": "src.image.image_processing",
+        "description": "src.image.image_processing",
+        "peekOfCode": "def adjust_brightness(input_path, output_path, factor=1.5):\n    \"\"\"Adjust image brightness.\"\"\"\n    image = Image.open(input_path)\n    enhancer = ImageEnhance.Brightness(image)\n    enhanced = enhancer.enhance(factor)\n    enhanced.save(output_path)\n    print(f\"Brightness adjusted image saved to: {output_path}\")\nif __name__ == \"__main__\":\n    input_file = \"../../input/sample.jpg\"\n    if os.path.exists(input_file):",
+        "detail": "src.image.image_processing",
+        "documentation": {}
+    }
+]
